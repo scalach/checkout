@@ -15,4 +15,6 @@ Requirements Assumptions
 
 2. I also took your requirement literally and assumed you wanted the output formatted.
 
+3. For the second phase, I assumed that each special offer can apply multiple times to the same basket.
+
 
