@@ -1,0 +1,18 @@
+Design Decisions
+~~~~~~~~~~~~~~~~
+This is a short document justifying someone of the decisions I made when completing this exercise. In particular I have tried to emphasise which trade-offs I have considered, and how I would normally design and implement systems.
+
+1. I used classicist style TDD for this exercise since there was very little code, which was mostly algorithmic. In general, I do prefer outside-in London style/mockist TDD. However, for this exercise I think that would have caused abstraction overload, which was completely unnecessary for such a small feature set. 
+
+2. After the first phase I did not make any refactoring. In general I am quite passionate about red, green, factor. But I also love simplicity and I'm a big fan of the GOOS principle of letting abstractions emerge. Whilst I could see a number of possible responsiblities emerging - price retrieval, price calculation, price formatting - for the sake of 5 lines of code, the SOLID principles would provide no benefit here and would probably lead to premature abstraction; potentially taking the design in the wrong direction.
+
+3. At the end of stage 1 I left the checkout class inside the test file. This is how I TDD  my code and I thought it would be useful if I left it in there both for the next step and for when you review it. Just to reassure you I would never do this for production code.
+
+
+Requirements Assumptions
+~~~~~~~~~~~~~~~~~~~~~~~~
+1. For this exercise I assumed you were mostly concerned about my approach to TDD. Therefore I took your comments literally about the inputs being a sane string of arrays that did not need validating e.g. [ "Apple", "Apple", "Orange" ]. There are so many reasons this is dangerous(in 99% of cases) I'm sure I don't need to list them here.
+
+2. I also took your requirement literally and assumed you wanted the output formatted.
+
+
