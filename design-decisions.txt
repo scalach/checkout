@@ -6,7 +6,15 @@ This is a short document justifying someone of the decisions I made when complet
 
 2. After the first phase I did not make any refactoring. In general I am quite passionate about red, green, factor. But I also love simplicity and I'm a big fan of the GOOS principle of letting abstractions emerge. Whilst I could see a number of possible responsiblities emerging - price retrieval, price calculation, price formatting - for the sake of 5 lines of code, the SOLID principles would provide no benefit here and would probably lead to premature abstraction; potentially taking the design in the wrong direction.
 
-3. At the end of stage 1 I left the checkout class inside the test file. This is how I TDD  my code and I thought it would be useful if I left it in there both for the next step and for when you review it. Just to reassure you I would never do this for production code.
+3. At the end of stage 1 I left the checkout class inside the test file. This is how I TDD  my code and I thought it would be useful if I left it in there both for the next step and for when you review it. Just to reassure you I would never do this for production code. I felt the same at the end of stage 2 - 10 lines of code just isn't worth refactoring, even though I have a good idea of the responsibilities that are likely to emerge. Hopefully this sets things up nicely for the face-to-face interview with pair programming where you will throw me some curve balls :)
+
+4. I sometimes put test cases in a separate object which is imported into the main test file. This allows me to put more focus on the behaviours of the component being tested, rather than clutter the view with test implementation details.
+
+5. I try to find a balance between expressiveness and extensiveness in my test. In this exercise, I felt it was best to have few expressive test that were parameterized by the data. I appreciate that sometimes this can make intent of each test case implicit, but I felt it wasn't a problem in this exercise and was the simplest, clearest solution and did hide important domain concepts.
+
+6. I definitely did write all my tests first using my preferred TDD approach, however I chose not to littler my git history with demonstratory commits.
+
+7. I added the apples() and oranges() helpers toward the end, but decided not to refactor all tests to use them because it didn't appear to be a maintenance problem at this stage, and nor did it harm the expressiveness (and also I was timeboxed to 40 minutes)
 
 
 Requirements Assumptions
